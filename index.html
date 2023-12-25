@@ -3,23 +3,32 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Ruby - Local Notes</title>
+    <title>Ruby</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
-        <h1>Ruby - Local Notes</h1>
+        <h1>Ruby - Private/Local Notes</h1>
     </header>
 
     <main>
-        <section id="notes">
-            <h2>Your Notes</h2>
+        <div class="tabs">
+            <button class="tablinks" onclick="openTab(event, 'newNoteTab')" id="defaultOpen">New Note</button>
+            <button class="tablinks" onclick="openTab(event, 'notesTab')">Your Notes</button>
+        </div>
+
+        <div id="newNoteTab" class="tabcontent" style="display:block;">
+            <h2>Create New Note</h2>
             <textarea id="noteContent" placeholder="Enter your note here..."></textarea>
-            <button id="saveNote">Save Note</button>
-            <button id="removeAll">Remove All Notes</button>
+            <button onclick="saveNote()">Save Note</button>
+        </div>
+
+        <div id="notesTab" class="tabcontent">
+            <h2>Your Notes</h2>
             <ul id="noteList"></ul>
-          </section>          
+            <button onclick="removeAllNotes()">Remove All Notes</button>
+        </div>          
     </main>
 
     <script src="app.js"></script>
