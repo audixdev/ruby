@@ -57,4 +57,20 @@ li {
     background-color: #fff;
     padding: 10px;
     margin-bottom: 5px;
+    position: relative;
+}
+
+.removeButton {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 4px 8px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.removeButton:hover {
+    background-color: #c9302c;
 }
